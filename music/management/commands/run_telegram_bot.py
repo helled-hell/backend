@@ -11,7 +11,7 @@ def start(message):
 def music(message):
     musics = Spotik.objects.all()
     for music in musics:
-        bot.send_message(message.chat.id, f"Song:{music.name}, Artist:{music.artist}")
+        bot.send_message(message.chat.id, f" {music.artist} - {music.name}")
         
 class Command(BaseCommand):
     def handle(self, *args, **options):
